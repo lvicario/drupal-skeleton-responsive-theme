@@ -1,0 +1,24 @@
+name = Central Registration
+description = Official theme for Central Registration
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/generic-page.css
+
+# scripts[] = js/tail.concatenated.js
+
+regions[extra_header] = Extra Header
+regions[page_top] = Page Top
+regions[header] = Header
+regions[main_navigation] = Main Navigation
+regions[highlighted] = Highlighted
+regions[content_top] = Content top
+regions[content] = Content
+regions[content_bottom] = Content bottom
+regions[bottom] = Bottom
+regions[footer] = Footer
+regions[extra_footer] = Extra Footer
+
+settings[matterhorn_tabs] = 1
+settings[matterhorn_breadcrumb] = 1
