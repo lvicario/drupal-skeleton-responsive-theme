@@ -1,0 +1,17 @@
+@import "../components/logo";
+
+@include media(">=desktop") {
+	.header {
+		height: 90px;
+		background: #1b1b19;
+
+		&.sticky {
+			position: static !important;
+		}
+
+		.container {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

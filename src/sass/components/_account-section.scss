@@ -1,0 +1,9 @@
+.btn-login{
+	position: absolute;
+	right: 13px;
+	top: 16px;
+	@include media("<tablet", "portrait") {
+		max-width: 80px;
+		word-wrap: break-word;
+	}
+}

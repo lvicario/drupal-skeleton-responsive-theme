@@ -1,0 +1,11 @@
+@include media(">=desktop") {
+    .logo, .logo a {
+        width: 240px;
+        height: 56px;
+    }
+
+    .logo {
+        float: left;
+        margin-top: 20px;
+    }
+}

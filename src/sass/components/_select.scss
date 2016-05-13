@@ -1,0 +1,61 @@
+@import '../vendor/stylish-select';
+    
+// Fix for Select/Dropdown color in initial load
+.form-select {
+	background-color: #fff;
+    color: #000;
+}
+
+.stylish-select  {
+
+	.newListSelected {
+		@include border-radius(2px);
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: auto;
+		background: #fff;
+	}
+
+	.selectedTxt {
+		@extend .input-block-level;
+		@extend input;
+		position: relative;
+		width: 100%;
+		height: auto;
+
+		&:before {
+			@include triangle(bottom, 8px, #333031);
+            position: absolute;
+            top: 16px;
+            right: 14px;
+            content: "";
+            display: block;
+            border-left-width: 7px;
+            border-right-width: 7px;
+            border-top-width: 12px;
+		}
+	}
+
+	// Dropdown
+	.SSContainerDivWrapper {
+		top: 100% !important;
+		width: 100%;
+	}
+
+	ul.newList {
+		li {
+
+		}
+
+		a {
+			padding: 10px 12px;
+			color: #333 !important;
+		}
+
+		.hiLite  {
+			background: #ccc !important;
+			color: #939598;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+@import 'global/common';
+@import '../../../../../base/sites/all/modules/custom/eiger/assets/sass/components/loader';
+
+
+// Section/Components
+// ==Phase 2==
+// @import 'components/registration-step';
+
+
+// Form dependency
+@import 'components/select';
+@import 'components/checkbox';
+@import 'vendor/jquery.ui.core';
+@import 'vendor/jquery.ui.datepicker';
+@import 'components/ui-datepicker';
+@import 'vendor/password-meter';
+
+
+@import '../../../../../base/sites/all/modules/custom/eiger/assets/sass/components/form';
+@import 'components/form';
+@import 'components/captcha';

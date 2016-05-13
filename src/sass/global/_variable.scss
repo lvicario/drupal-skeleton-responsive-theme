@@ -1,0 +1,201 @@
+// Resonsive Design Break Points
+$mobile-breakpoint:  		0;
+$mobile-medium-breakpoint:  360px;
+$tablet-breakpoint:     	768px;
+$desktop-breakpoint:		1024px;
+
+// Overall Layout
+$container-max-width:	1000px;
+$side-gap:				15px; // Container left/right space/gap
+$side-gap-addition:		5px; // Additional gap for larger screen sizes
+
+// Default Fonts
+$default-font-family:		"Trebuchet MS", Arial, Helvetica, sans-serif;
+$default-code-font-family:	'courier new', monospace, serif;
+
+// Font Size Defaults
+$default-font-size:   12px;
+$default-line-height: normal;
+
+$h1: 18px;
+$h2: 16px;
+$h3: 15px;
+$h4: 14px;
+$h5: 12px;
+$h6: 12px;
+
+$default-font-color:			#fff;
+$default-heading-color:			$default-font-color;
+$default-link-color:			#e5c99b;
+$default-link-color-hover:		#ffe000;
+$default-bg-color:				#3d3d3c;  // background-color for <body> element
+$default-button-color:			#ffe000;
+$default-button-hover-color:	#fff935;
+$sitewide-border-color:			#686868;
+$default-hr-border-color:		$sitewide-border-color;
+
+// Buttons
+$button-color:				#000;
+$button-hover-color:		$button-color;
+$button-bg:					#f4f4f4;
+$button-top-bg:				#e4e4e4;
+$button-bottom-bg:			#9d9d9d;
+$button-hover-bg:			#f4f4f4;
+$button-hover-top-bg:		#fefefe;
+$button-hover-bottom-bg:	#eaeaea;
+$button-border-color:		transparent;
+$button-hover-border-color: $button-border-color;
+
+
+// Miscellaneous
+$sprite:						'../../../../../sites/all/modules/custom/eiger/assets/images/eiger_sprite.png';
+// $sprite:						'../images/eiger_sprite.png';
+$sprite_site:					'../images/site_sprite.png';
+$sprite_matterhorn:				'../images/matterhorn/sprite_matterhorn_en.png';
+$sprite_maintenance_restriction: '../../../../../sites/all/modules/custom/eiger/assets/images/restricted_maintenance.png';
+$default-element-margin-bottom:	15px; // h1, h2, h3, h4, h5, h6, p, ul, ol, table, dl, form, menu
+
+// form Elements
+$input-color-placeholder:		#999 !default;
+$disabled-form-item-bg-color:	#ebebe4;
+
+// Header
+$header-mini-bg:				#af0000;
+
+// Navigation
+$menubile-width:					275px;
+$menubile-font-color:				#fff;
+$menubile-font-color-hover:			#fff;
+$menubile-background-color:			#363435;
+$menubile-background-color-hover:	#2A2728;
+$menubile-border-color:				transparent;
+$menubile-submenu-color:			#fff;
+$menubile-submenu-bg-color:			#444344;
+$menubile-submenu-active-bg-color : #3d3d3c;
+
+
+// Footer
+$footer-link-color: #fff;
+$footer-background: rgba(0,0,0,0.7);
+$footer-copyright-border-top-color: rgba(255,255,255, 0.1);
+$footer-copyright-color: #fff;
+$footer-live-chat-icon-position: 0 0;
+$footer-view-desktop-icon-position: -20px 0;
+
+// Language
+$language-text-color: #f5f5f5;
+$language-hover-text-color: $language-text-color;
+$language-background-color: #333333;
+$language-hover-background-color: #2b2829;
+$language-header-text-color: #f5f5f5;
+$language-left-arrow-background-position: 0 -600px;
+$language-left-arrow-hovered-background-position: 0 -600px;
+$language-switcher-background: #41413d;
+$language-switcher-font-color: #fff;
+$language-switcher-hover-background-color: #6D6D6C;
+
+
+// Forms
+$error-message-background-color: #af0000;
+$error-message-font-color: #fff;
+$annotation-font-color: #6e6e6e;
+$agreement-background-color: #333333;
+
+
+// Desktop Specific Variables =====================================================================
+
+// Language Selector
+$language-selector-color:			#fff;
+$language-selector-bg:				#830000;
+$language-selector-bg-hover:		#8e0101;
+$language-selector-dropdown-color:	$language-selector-color;
+
+// Product Navigation Bar
+$product-nav-bar-bg:		#a90000;
+$product-nav-bar-bg-top:	#a90000;
+$product-nav-bar-bg-bottom:	#9b0202;
+
+// Product Navigation
+$product-nav-color:					#fff;
+$product-nav-bg:					transparent;
+$product-nav-color-hover:			$product-nav-color;
+$product-nav-bg-hover:				#720101;
+$product-nav-border-left-color:		#720101;
+$product-nav-border-right-color:	#a00;
+
+// Registration Steps
+$registration-step-color:				#939598;
+$registration-step-bg:					#545454;
+$registration-step-number-bg:			#606060;
+$registration-step-color-highlight:		#fff;
+$registration-step-bg-highlight:		#ae0000;
+$registration-step-number-bg-highlight:	#9b0000;
+$registration-step-border-color:		#50504f;
+
+// Password Meter
+$password-meter-font-color: #fff;
+$password-meter-bg: #380104;
+$password-meter-bg-too-short: #f5ac00;
+$password-meter-bg-weak: $password-meter-bg-too-short;
+$password-meter-bg-good: #6699cc;
+$password-meter-bg-strong: #008000;
+$password-meter-bg-width-too-short: 28%;
+$password-meter-bg-width-weak: $password-meter-bg-width-too-short;
+$password-meter-bg-width-good: 60%;
+$password-meter-bg-width-strong: 100%;
+
+// Maintenance Page
+$maintenance-header-bg: #141414;
+$maintenance-body-bg: #0f0f0f;
+$maintenance-font-color: #fff;
+$maintenance-mobile-portrait-bg:		'../images/maintenance-page-mobile-portrait.png';
+$maintenance-mobile-landscape-bg:		'../images/maintenance-page-mobile-landscape.png';
+$maintenance-tablet-portrait-bg:		'../images/maintenance-page-tablet-portrait.png';
+$maintenance-tablet-landscape-bg:		'../images/maintenance-page-tablet-landscape.png';
+
+// Restriction Page
+$restriction-page-body-bg-color: #0e0e0f;
+$restriction-page-link-color: #ffe000;
+$restriction-page-header-bg: #141414;
+$restriction-page-chat-icon: url("/sites/all/modules/custom/eiger/assets/images/restricted_maintenance.png");
+$restriction-page-background-image: #0e0e0f url("/sites/all/modules/custom/eiger/assets/images/light_effect.png");
+
+// Join Now Button
+$join-now-btn-color:				#000;
+$join-now-btn-hover-color:			#000;
+$join-now-btn-border-color:			#fde394;
+$join-now-btn-background-color:		#f8ce38;
+$join-now-btn-top-color:			#f8ce38;
+$join-now-btn-bottom-color:			#fe9c03;
+
+//Log in Button
+$login-button-color:			#000;
+$login-button-bg:				#c7c7c7;
+$login-button-top-bg:			#e4e4e4;
+$login-button-bottom-bg:		#9d9d9d;
+$login-button-border-color:		#eaeaea;
+
+//Hover of Log in Button
+$login-button-hover-color:			#878787;
+$login-button-hover-bg:				#323031;
+$login-button-hover-top-bg:			#403f41;
+$login-button-hover-bottom-bg:		#262224;
+$login-button-hover-border-color:	#656565;
+
+//Log in Button
+$cashier-button-color:			#000;
+$cashier-button-bg:				#c7c7c7;
+$cashier-button-top-bg:			#e4e4e4;
+$cashier-button-bottom-bg:		#9d9d9d;
+$cashier-button-border-color:		#eaeaea;
+
+// Left menu
+$left-menu-background: #353334;
+
+// Overlay
+$main-overlay-color: rgba(0,0,0,0.5);
+
+// Login Loader
+$loader-bg:			rgb(84,86,84);
+$loader-bg-0:		rgb(84,86,84);
+$loader-bg-100:		rgba(172,170,172,0.97);

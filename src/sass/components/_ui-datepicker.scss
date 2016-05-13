@@ -1,0 +1,153 @@
+// Patepicker Calendar Icon
+.ui-datepicker-trigger {
+	position: absolute;
+	top: 27px;
+	right: -3px;
+	cursor: pointer;
+	padding: 6px 10px;
+}
+
+input.hasDatepicker:disabled {
+	background-color: #fff;
+}
+
+// Datepicker Styles
+.ui-datepicker {
+	top: 100% !important;
+	left: 0 !important;
+	width: 100%;
+	padding: 0;
+	border: none;
+	font-family: $default-font-family;
+	font-size: 14px;
+
+	// Calendar Header
+	.ui-datepicker-header {
+		padding: 8px 0;
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+		border: none;
+		background: #380104;
+	}
+	
+	// Calendar Prev/Next Button
+	.ui-datepicker-prev,
+	.ui-datepicker-next {
+		@include border-radius(0);
+		top: 0;
+		width: 35px;
+		height: 100%;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -4.5px 0 0 -6px;
+			display: block;
+			content: "";
+			width: 9px;
+			height: 12px;
+			background: url($sprite_site) no-repeat;
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	.ui-datepicker-prev {
+		left: 0;
+
+		&:before {
+			background-position: -40px -100px;
+		}
+	}
+
+	.ui-datepicker-next {
+		right: 0;
+
+		&:before {
+			background-position: -60px -100px;
+		}
+	}
+	
+	// Calendar Title
+	.ui-datepicker-title {
+		margin: 0;
+	}
+	
+	// CalendarMonth/Year Dropdown
+	select.ui-datepicker-month,
+	select.ui-datepicker-year {
+		display: inline-block;
+		width: 30%;
+	    margin: 0 2px;
+	    padding: 4px 0px 4px 7px;
+	    border: none;
+	    background-color: #603436;
+	    font-size: 13px;
+
+	    option {
+	    	color: #fff;
+	    }
+	}
+
+	// Week Style
+	th {
+		padding: 3px 0;
+		background: #fff;
+		color: #666;
+		font-size: 11px;
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+	
+	// Days Style
+	td {
+		padding: 0;
+		border: 1px solid #e9e9e9;
+		border-right: none;
+		@include gradient(#f6f6f6, #fafafa, #ededed);
+		text-align: center;
+
+		a,
+		span {
+			padding: 7px;
+			border: none;
+			color: #333;
+			text-align: center;
+		}
+
+		a:hover {
+			color: #603436;
+		}
+
+		.ui-state-default,
+		.ui-widget-content .ui-state-default,
+		.ui-widget-header .ui-state-default {
+			@include gradient(#f6f6f6, #fafafa, #ededed);
+			border: none;
+			font-weight: bold;
+		}
+
+		.ui-state-default,
+		.ui-widget-content .ui-state-default,
+		.ui-widget-header .ui-state-default {
+			border: none;
+		}
+
+		.ui-state-highlight,
+		.ui-widget-content .ui-state-highlight,
+		.ui-widget-header .ui-state-highlight {
+			background: #603436;
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

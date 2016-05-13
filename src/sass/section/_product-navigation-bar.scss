@@ -1,0 +1,12 @@
+@import '../components/product-navigation';
+@import '../components/language-switcher';
+
+.product-navigation-bar {
+	@extend .container;
+	@extend .clearfix;
+	position: relative;
+	z-index: 2;
+	margin: 10px auto;
+	padding: 1px;
+	@include gradient($product-nav-bar-bg, $product-nav-bar-bg-top, $product-nav-bar-bg-bottom);
+}

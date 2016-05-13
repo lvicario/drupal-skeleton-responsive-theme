@@ -1,0 +1,211 @@
+@include media(">=desktop") {
+
+	// Overide style from mobile
+	.footer {
+		background: transparent;
+
+		.menu {
+			display: none;
+		}
+
+		.copyright {
+			border-top: none; 
+			background: #171717;
+		}
+	}
+
+	// Desktop Style specific
+    .footer-desktop {
+		width: $container-max-width;
+		margin-top: 50px;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: left;
+
+		color: #888;
+
+		a,
+		h4 {
+			color: #888;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #aaa;
+		}
+	}
+
+	/* Partners */
+	.sponsors,
+	.payment-method,
+	.partners {
+		padding-left: 0;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	.sponsors li,
+	.payment-method li,
+	.partners li {
+		display: inline;
+	}
+
+	.sponsors li span,
+	.payment-method li span,
+	.partners li span {
+		display: inline-block;
+		vertical-align: middle;
+		zoom: 1; /* Fix for IE7 */
+		*display: inline; /* Fix for IE7 */
+		background-image: url($sprite_matterhorn);
+		background-repeat: no-repeat;
+		font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; /* For hiding text */
+	}
+
+	.sponsors span {
+		margin: 0 15px 20px;
+	}
+
+	.payment-method span {
+		margin: 0 2px;
+	}
+
+	.partners span {
+		margin: 0 3px;
+	}
+
+	.sunderland span	{width: 220px; height: 80px; background-position: -2px 0;}
+	.everton span		{width: 219px; height: 80px; background-position: -260px 0;}
+	.celtic span		{width: 183px; height: 80px; background-position: -520px 0;}
+	.blackburn span		{width: 202px; height: 80px; background-position: -760px 0;}
+	.fnatic span		{width: 149px; height: 52px; background-position: -1000px 0;}
+	.egaming span		{width: 190px; height: 50px; background-position: -1220px 0;}
+
+	.jbc span			{width: 33px; height: 24px; background-position: 0 -80px;}
+	.skrill span		{width: 61px; height: 21px; background-position: -40px -80px;}
+	.asiapay span		{width: 136px; height: 20px; background-position: -120px -80px;}
+	.neteller span		{width: 97px; height: 19px; background-position: -260px -80px;}
+	.ecashasia span		{width: 89px; height: 29px; background-position: -580px -80px;}
+	.paybay span		{width: 91px; height: 26px; background-position: -680px -80px;}
+	.paysafecard span	{width: 108px; height: 20px; background-position: 0 -120px;}
+	.asianteller span	{width: 89px; height: 17px; background-position: -120px -120px;}
+
+	.firstcagayan span	{width: 96px; height: 35px; background-position: -220px -120px;}
+	.ceza span			{width: 88px; height: 30px; background-position: -320px -120px}
+	.playtech span		{width: 126px; height: 28px; background-position: -540px -120px;}
+	.ipoker span		{width: 94px; height: 30px; background-position: -680px -120px;}
+
+	.footer-info {
+		float: left;
+		width: 585px;
+		font-size: 12px;
+		line-height: 15px;
+		text-align: justify;
+	}
+
+	.footer-contact-info {
+		float: right;
+		width: 355px;
+	}
+
+	.social {
+		margin: 0 0 20px 40px;
+		padding-left: 0;
+		list-style-type: none;
+		overflow: hidden;
+	}
+
+	.social li {
+		display: inline;
+	}
+
+	.social a {
+		float: left;
+		display: inline;
+		width: 38px;
+		height: 38px;
+		margin-left: 10px;
+		background: url($sprite_matterhorn) no-repeat;
+
+		font: 0/0 a;
+		color: transparent;
+		text-shadow: none;
+		background-color: transparent;
+		border: 0;
+	}
+
+	.social .facebook a			{
+		background-position: 0 -160px;
+
+		&:hover {
+			background-position: 0 -200px;
+		}
+	}
+
+	.social .twitter a			{
+		background-position: -40px -160px;
+
+		&:hover {
+			background-position: -40px -200px;
+		}
+	}
+
+	.social .google a			{
+		background-position: -80px -160px;
+
+		&:hover {
+			background-position: -80px -200px;
+		}
+	}
+
+	.social .youtube a			{
+		background-position: -120px -160px;
+
+		&:hover {
+			background-position: -120px -200px;
+		}
+	}
+
+	.contact-icons {
+		padding-left: 0;
+		list-style-type: none;
+		font-size: 11px;
+	}
+
+	.contact-icons li {
+		float: left;
+		width: 155px;
+		height: 38px;
+		line-height: 20px;
+	}
+
+	.contact-icons span {
+		float: left;
+		display: inline;
+		margin-right: 5px;
+		@include iconify-text($sprite_matterhorn, -400px, -160px, 28px, 18px);
+
+		&.icon-email {
+			// Uses the above declarations
+		}
+
+		&.icon-bubble {
+			width: 28px;
+			height: 27px;
+			line-height: 27px;
+			background-position: -480px -160px;
+		}
+
+		&.icon-phone {
+			width: 20px;
+			height: 26px;
+			background-position: -440px -160px;
+		}
+	}
+
+	.copyright {
+		clear: both;
+		margin-bottom: 0;
+		text-align: center;
+	}
+}

@@ -1,2 +1,1 @@
-# drupal-skeleton-responsive-theme
-Responsive starter/base drupal theme.
+# drupal7-bootstrap3-starter-theme

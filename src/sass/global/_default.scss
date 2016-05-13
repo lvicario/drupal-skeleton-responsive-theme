@@ -1,0 +1,36 @@
+// ==Phase 2==
+// body {
+// 	@include media(">=desktop") {
+// 		background: #1b1b19;
+// 	}
+// }
+
+
+h1, .h1 {font-size: $h1; color: $default-heading-color;}
+h2, .h2 {font-size: $h2; color: $default-heading-color;}
+h3, .h3 {font-size: $h3; color: $default-heading-color;}
+h4, .h4 {font-size: $h4; color: $default-heading-color;}
+h5, .h5 {font-size: $h5; color: $default-heading-color;}
+h6, .h6 {font-size: $h6; color: $default-heading-color;}
+
+// Registration heading
+.page-join h1,
+.page-join .h1 {
+	font-weight: bold;
+}
+
+.icon {
+    &-selected {
+    	width: 28px;
+    	height: 23px;
+    	background-position: 0 -780px;
+    	vertical-align: -8px;
+    }
+}
+
+// Removed extra markup for system tab if not logged in
+.not-logged-in {
+	.tabs {
+		display: none;
+	}
+}

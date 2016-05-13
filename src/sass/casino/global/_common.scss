@@ -1,0 +1,52 @@
+// @import '../vendor/normalize';
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/vendor/normalize';
+
+
+// Variable and Mixins
+@import 'variable';
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/global/mixin';
+
+
+// Base Style 
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/global/default';
+@import '../../global/default';
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/global/layout';
+@import '../../global/layout';
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/global/helper';
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/components/button';
+@import '../../components/button';
+
+// Hacks
+@import '../../global/browser-specific';
+
+// CMS/System Utilities
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/components/system-tabs';
+
+
+// Sections
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/section/header';
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/section/footer';
+
+
+// Site
+@import '../../../../../../../base/sites/all/modules/custom/eiger/assets/sass/components/navigation';
+@import '../../components/account-section';
+
+
+// ==Phase 2==
+// @import '../section/header';
+// @import '../section/footer';
+// @import '../section/product-navigation-bar';
+
+
+// ==Phase 2== Remove ff lines in Phase 2
+.product-navigation-bar,
+.registration-step,
+.footer-desktop,
+.additional-note {
+	display: none !important;
+}
+
+
+// ==Phase 2==
+// .main h1 {@include media(">=desktop"){display: none;}}

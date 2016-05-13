@@ -1,0 +1,64 @@
+.registration-step {
+	@extend .clearfix;
+	clear: both;
+	list-style-type: none;
+	// margin-top: -25px;
+	margin-bottom: 30px;
+	padding-left: 0;
+	border-bottom: 1px solid $registration-step-border-color;
+	font-size: 20px;
+	text-transform: uppercase;
+
+	li {
+		float: left;
+		width: 33.33333333333333%;
+		height: 47px;
+		line-height: 47px;
+		background: $registration-step-bg;
+		color: $registration-step-color;
+	}
+
+	span {
+		position: relative;
+		float: left;
+		width: 50px;
+		margin-right: 20px;
+		background: $registration-step-number-bg;
+		text-align: center;
+
+		&:before {
+			@include triangle(right, 10px, $registration-step-bg);
+			position: absolute;
+			top: 50%;
+			left: 0;
+			display: block;
+			margin-top: -10px;
+			content: "";
+		}
+	}
+
+	.step-1 {
+		background: $registration-step-bg-highlight;
+		color: $registration-step-color-highlight;
+
+		span {
+			background: $registration-step-number-bg-highlight;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	.step-2 {
+		span {
+			&:before {
+				border-left-color: $registration-step-bg-highlight;
+			}
+		}
+	}
+
+	.step-3 {
+		
+	}
+}

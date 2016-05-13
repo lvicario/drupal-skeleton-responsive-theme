@@ -1,0 +1,72 @@
+.language-selector {
+    position: relative;
+    float: right;
+    width: 170px;
+    margin: 8px 8px 0 0;
+
+    a {
+        position: relative;
+        display: block;
+        height: 27px;
+        line-height: 27px;
+        padding: 0 5px 0 40px;
+        background: $language-selector-bg;
+        color: $language-selector-color;
+        font-size: 12px;
+        text-decoration: none;
+
+        &:hover {
+            background: $language-selector-bg-hover;
+        }
+    }
+    
+    // Selector Arrow
+    .selector:after {
+        @include triangle(bottom, 5px, $language-selector-dropdown-color);
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        display: block;
+        content: "";
+        border-left-width: 4px;
+        border-right-width: 4px;
+        border-top-width: 7px;
+    }
+    
+    // Dropdown
+    ul {
+        z-index: 2;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+            
+        }
+    }
+
+    a:before {
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        display: block;
+        content: "";
+        width: 29px;
+        height: 17px;
+        background: url($sprite_site) no-repeat 0 -20px;
+    }
+
+    .eu a:before {background-position: 0 -40px;}
+    .zh-hans a:before {background-position: 0 -60px;}
+    .zh-hant a:before {background-position: 0 -80px;}
+    .th a:before {background-position: 0 -100px;}
+    .vi a:before {background-position: 0 -120px;}
+    .ja a:before {background-position: 0 -140px;}
+    .ko a:before {background-position: 0 -160px;}
+    .hi a:before {background-position: 0 -180px;}
+    .el a:before {background-position: 0 -200px;}
+    .pl a:before {background-position: 0 -220px;}
+}

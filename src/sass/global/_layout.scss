@@ -1,0 +1,80 @@
+.main {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+// Registration
+.main .container {
+    width: 82%;
+    // width: 255px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @include media(">=tablet") {
+        width: 88%;
+        // width: 550px;
+    }
+    
+    @include media(">=desktop") {
+        width: 100%;
+        // width: 840px;
+        // ==Phase 2==
+        // background: #545454;
+    }
+}
+
+// Drupal Error Messages Styles
+.messages.error {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border-color: #ebcccc;
+    border-radius: 4px;
+    background-color: #f2dede;
+    color: #a94442;
+    word-wrap: break-word;
+}
+
+@include media(">=tablet", "<desktop") {
+    // Tablet 2 Column
+    .tab-left,
+    .tab-right {
+        float: left;
+        width: 46.75%;
+    }
+
+    .tab-left {
+        margin-right: 6.5%;
+    }
+
+    .tab-right {
+        // clear: right;
+    }
+
+    .tab-full {
+        clear: both;// ==Phase 2==
+    }
+}
+
+@include media(">=desktop") {
+    .col-1,
+    .col-2,
+    .col-3 {
+        float: left;
+        width: 29.33333333333333%;
+        margin-bottom: 20px;
+    }
+
+    .col-1 {
+        margin-left: 2%;
+    }
+
+    .col-2 {
+        margin: 0 4%;
+    }
+
+    .col-3 {
+        clear: right;
+        margin-right: 2%;
+    }
+}

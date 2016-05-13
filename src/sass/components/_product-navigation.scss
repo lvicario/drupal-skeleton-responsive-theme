@@ -1,0 +1,40 @@
+.product-menu {
+	float: left;
+
+	ul {
+		@extend .clearfix;
+		list-style-type: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	li {
+		float: left;
+		border-left: 1px solid $product-nav-border-left-color;
+		border-right: 1px solid $product-nav-border-right-color;
+
+		&:first-child {
+			border-left: none;
+		}
+
+		&:last-child {
+			border-right-color: $product-nav-border-left-color;
+		}
+	}
+
+	a {
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 18px;
+		background: $product-nav-bg;
+		color: $product-nav-color;
+		font-size: 18px;
+		text-decoration: none;
+
+		&:hover {
+			background: $product-nav-bg-hover;
+			color: $product-nav-color-hover;
+		}
+	}
+}

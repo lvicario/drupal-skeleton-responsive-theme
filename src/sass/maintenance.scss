@@ -1,0 +1,279 @@
+@import 'global/common';
+@import '../../../../../base/sites/all/modules/custom/eiger/assets/sass/components/language-switcher';
+
+.header {
+	background: $maintenance-header-bg;
+	.logo {
+		text-align: left;
+		margin: 15px 0 0 20px;
+		width: auto;
+
+		span {
+			@extend .inline-block;
+			position: relative;
+			width: 130px;
+			height: 31px;
+			text-indent: -99999px;
+
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.maintenance-page {
+	background: $maintenance-body-bg;
+	color: $maintenance-font-color;
+}
+
+.maintenance-content {
+	.top-content {
+		margin: 10px auto 0;
+		word-wrap: break-word;
+		h1 {
+			color: $maintenance-font-color;
+			margin-bottom: 10px;
+			@include media(">=tablet") {
+				font-size: 18px;
+			}
+		}
+		p {
+			font-size: 14px;
+			text-align: justify;
+			margin-bottom: 0;
+		}
+	}
+}
+.bottom-content {
+	position: relative;
+}
+
+.maintenance-option {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	ul {
+		position: relative;
+		list-style-type: none;
+		padding-left: 0;
+		font-size: 12px;
+		display: table;
+		margin: 0 auto;
+	}
+	li {
+		@extend .left;
+		position: relative;
+		min-height: 30px;
+		word-wrap: break-word;
+	}
+
+	div {
+		display: inline-block;
+		&.email-support-link {
+			max-width: 120px;
+			}
+	}
+
+	a {
+		text-decoration: none;
+		color: $maintenance-font-color;
+		@extend .block;
+	}
+
+	.one-liner {
+		line-height: 30px;
+	}
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	@include iconify-text($sprite_maintenance_restriction, 0px, 0px, 32px, 30px);
+}
+
+.icon {
+	&-bubble-rounded        {background-position: 0px 0px;}
+	&-email-rounded         {background-position: 0 -40px;}
+	&-phone-rounded         {background-position: 0 -80px;}
+}
+
+@include media("portrait", "<tablet") { 
+	.header {
+		.logo {
+			margin: 15px 0 0 5px;
+		}
+	}
+
+	.maintenance-content {
+		.top-content {
+			width: 290px;
+		}
+
+		.bottom-content {
+			background:url($maintenance-mobile-portrait-bg) no-repeat;
+			background-size: 100%;
+			min-height: 325px;
+		}
+		.maintenance-option {
+			li {
+				display: block;
+				float: none;
+				margin: 10px 0;
+			}
+			div {
+				float: left;
+			}
+		}
+	}
+}
+
+@include media("landscape", "<tablet") {
+	.main {
+		background:url($maintenance-mobile-landscape-bg) no-repeat;
+		background-size: 100%;
+	}
+
+	.maintenance-content {
+		.top-content {
+			margin-left: 20px;
+			max-width: 250px;
+		}
+	}
+
+	.bottom-content {
+		min-height: 250px;
+	}
+
+	.maintenance-option {
+		bottom: 40px;
+		li {
+			margin: 0 20px;
+			display: table;
+		}
+		div {
+			display: table-cell;
+			vertical-align: middle;
+			&.phone-link {
+				max-width: 160px;
+			}
+		}
+	}
+}
+
+@include media(">=tablet") {
+	.maintenance-option {
+		div {
+			float: left;
+		}
+	}
+}
+
+@include media("portrait", ">=tablet") { 
+	.maintenance-content {
+		.top-content {
+			margin: 30px 130px 0;
+		}
+	}
+
+	.bottom-content {
+		background:url($maintenance-tablet-portrait-bg) no-repeat;
+		background-size: 100%;
+		min-height: 390px;
+	}
+
+	.maintenance-option {
+		bottom: 4%;
+		li {
+			margin: 0 15px;
+			&.toll-fee {
+				max-width: 275px;
+			}
+		}
+	}
+}
+
+@include media("landscape", ">=tablet") {
+	.header {
+		.logo {
+			margin: 15px 0 0 30px;
+		}
+	}
+	.wrapper {
+		.main {
+			background:url($maintenance-tablet-landscape-bg) no-repeat;
+			background-size: 100%;
+			background-position: 0 -60px;
+			height: 100%;
+		}
+	}
+
+	.maintenance-content {
+		.top-content {
+			margin: 60px 180px 0;
+			max-width: 315px;
+		}
+	}
+	
+	.bottom-content {
+		min-height: 460px;
+	}
+
+	.maintenance-option {
+		bottom: 9%;
+
+		li {
+			margin: 0 15px;
+			&.toll-fee {
+				max-width: 275px;
+			}
+		}
+	}
+}
+
+
+@include media("landscape", "<tablet") {
+	.galaxy-v, .galaxy-vplus {
+		&.chrome, &.safari {
+			.wrapper {
+				position: relative;
+				min-height: 380px;
+				.bottom-content {
+					min-height: 190px;
+				}
+			}
+		}
+
+		.maintenance-option {
+			bottom: 25px;
+			li {
+				margin: 0 5px;
+			}
+		}
+	}
+}
+
+.ipad {
+	@include media("portrait", ">=tablet") {
+		.maintenance-option {
+			bottom: 8%;
+		}
+	}
+
+	@include media("landscape", ">=tablet") {
+		.wrapper {
+			.main {
+				background-position: 0 -50px;
+			}
+		}
+
+		.bottom-content {
+			min-height: 350px;
+		}
+		.maintenance-option {
+			bottom: 11%;
+		}
+	}
+}

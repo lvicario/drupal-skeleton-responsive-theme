@@ -1,0 +1,18 @@
+.btn {
+	color: $button-color;
+}
+
+.btn:hover {
+	@include gradient($button-hover-bg, $button-hover-top-bg, $button-hover-bottom-bg);
+	color: $button-hover-color;
+}
+
+// Buttons Behaviour
+.btn-flexible {
+	display: block;
+	width: 100%;
+	max-width: 390px;
+	min-width: 230px;
+	margin-left: auto;
+	margin-right: auto;
+}

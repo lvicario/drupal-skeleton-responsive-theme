@@ -1,0 +1,315 @@
+.form-item {
+    @extend .clearfix;
+    position: relative;
+    margin-bottom: 15px;
+
+    // Add right padding to textfield when it has an error or success icon
+    input.error,
+    input.valid {
+        padding-right: 37px;
+    }
+    
+    // Error Icon
+    .mark {
+        @extend .hide-text;
+        position: absolute;
+        top: 37px;
+        right: 10px;
+        z-index: 1;
+        display: block;
+        width: 22px;
+        height: 23px;
+        background: url($sprite_site) no-repeat;
+
+        &.success {
+            background-position: -40px 0;
+        }
+
+        &.error {
+            background-position: -80px 0px;
+        }
+
+        // Pending loader for Username field
+        &.pending {
+            top: 38px;
+            width: 20px;
+            height: 20px;
+            background: url(../images/pending.gif) no-repeat 0 0;
+        }
+    }
+
+    // Error Messages
+    .error-message {
+        position: relative;
+        clear: both;
+        display: block;
+        padding: 10px 28px 14px 28px;
+        background: #af0000;
+
+        &:before {
+            @include triangle(top, 8px, #af0000);
+            position: absolute;
+            top: -5px;
+            right: 13px;
+            content: "";
+            display: block;
+        }
+    
+        // Simulate Tooltip display from disktop
+        // @include media(">=desktop") {
+        //     position: absolute;
+        //     top: 10px;
+        //     right: -200px;
+        //     left: initial;
+        //     z-index: 2;
+        //     width: 200px;
+        // }
+    }
+    
+    // Annotation Text
+    .annotation {
+        display: block;
+        margin-top: 10px;
+        color: #999;
+    }
+}
+
+// Birthdate Item (Datepicker)
+.form-item-birthdate {
+    .mark {
+        right: 47px;
+    }
+
+    .error-message {
+
+        &:before {
+            right: 50px;
+        }
+    }
+}
+
+// Gender Item
+.form-item-gender {
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    .form-radios {
+
+    }
+
+    .form-item {
+        display: inline;
+
+        &:before,
+        &:after {
+            display: inline;
+        }
+        
+        label,
+        input {
+            display: inline;
+        }
+
+        &:first-child {
+            @extend .tab-left;
+
+            @include media("<tablet") {
+                margin-right: 20px;
+            }
+
+            @include media(">=desktop") {
+                margin-right: 10px;
+            }
+            
+        }
+
+        &:last-child {
+            @extend .tab-right;
+        }
+    }
+
+    .mark {
+        position: relative;
+        display: inline-block;
+        top: 5px;
+        left: 10px;
+        margin-top: -9px;
+
+        @include media(">=tablet", "<desktop") {
+            position: absolute;
+            top: 37px;
+            left: inherit;
+            right: 10px;
+        }
+    }
+}
+
+// Select/Dropdown Item
+.form-type-select {
+    .mark {
+        right: 36px;
+    }
+
+    .error-message:before {
+        right: 39px;
+    }
+}
+
+.form-action {
+    padding-top: 1px;
+    padding-bottom: 30px;
+
+    .loading {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: 10px auto 0;
+        background: url("../images/loading-image.gif") no-repeat;
+    }
+
+    @include media(">=tablet") {
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    // ==Phase 2==
+    // @include media(">=desktop") {
+    //     padding-bottom: 10px;
+    // }
+}
+
+// Server Error
+.reg-error {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid $sitewide-border-color;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+
+    span {
+        position: relative;
+        display: inline-block;
+        padding-right: 28px;
+    }
+
+    span:after {
+        @extend .hide-text;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        content: "";
+        width: 22px;
+        height: 23px;
+        margin-top: -11px;
+        background: url($sprite_site) no-repeat -80px 0px;
+    }
+
+    @include media(">=desktop") {
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}
+
+.agreement-block {
+    @extend .clear;
+    margin-top: 10px;
+
+    label {
+        display: block;
+        margin-right: 10px;
+        padding: 3px;
+        padding-left: 35px;
+        font-size: 14px;
+    }
+
+    .form-item {
+        padding-right: 23px;
+    }
+
+    .mark {
+        top: 0;
+        right: 0px;
+
+        &.error {
+            @include box-sizing(content-box);
+            top: -8px;
+            right: -8px;
+            padding: 8px;
+            background-position: -72px 8px;
+
+            @include media(">=tablet") {
+                right: -21px;
+            }
+        }
+    }
+
+    .error-message {
+        margin-right: -23px;
+
+        &:before {
+            right: 3px;
+        }
+    }
+
+    @include media(">=tablet") {
+        width: 560px;
+        margin: 20px auto 0;
+        padding: 20px 30px 5px;
+        background: #333;
+
+        .form-item {
+            padding-right: 10px;
+        }
+
+        .mark {
+            right: -13px;
+        }
+    }
+}
+
+
+// Animated ellipse loader
+#loader {
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+
+.form-overlay {
+    position: relative;
+    
+    // Cover the main content, thus avoid all interaction to form
+    &:before {
+        position: absolute;
+        z-index: 1000;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
+    
+    .form-item,
+    .form-submit,
+    .reload-captcha,
+    .captcha img,
+    h1 {
+        opacity: 0.7;
+    }
+}
+
+// ==Phase 2==
+// .additional-note {
+//     display: none;
+
+//     @include media(">=desktop") {
+//         display: block;
+//         margin: -20px 0 0;
+//         padding: 5px 0 20px;
+//         text-align: center;
+//         font-size: 12px;
+//         color: #939598;
+//     }
+// }

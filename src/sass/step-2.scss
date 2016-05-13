@@ -1,0 +1,154 @@
+@import 'global/common';
+
+h3 {
+	margin-top: 18px;
+	font-size: 18px;
+	text-align: center;
+}
+
+h4 {
+    font-size: 15px;
+	text-align: center;
+    font-weight: normal;
+}
+
+.offer-box {
+	position: relative;
+	width: 265px;
+	margin: 0 auto 55px;
+	padding: 20px 20px 10px;
+	border: 1px solid #686868;
+	font-size: 18px;
+	font-weight: bold;
+
+	&:before,
+	&:after {
+		position: absolute;
+	}
+
+	&:before {
+		bottom: -40px;
+		left: 50%;
+		display: block;
+		content: "";
+		width: 47px;
+		height: 40px;
+		margin-left: -23px;
+		background: url($sprite_site) no-repeat -40px -40px;
+	}
+
+	&:after {
+		bottom: -1px;
+		left: 50%;
+		display: block;
+		content: "";
+		width: 18px;
+		height: 1px;
+		margin-left: -9px;
+		background: $default-bg-color;
+	}
+	
+	.icon-selected {
+		float: left;
+	}
+
+	.offer-text {
+		display: block;
+		padding-top: 3px;
+		padding-left: 35px;
+		line-height: 20px;
+	}
+}
+
+.btn {
+	width: 265px;
+	display: block;
+	margin: 0 auto 12px;
+}
+
+.skip-link {
+	position: relative;
+	display: inline-block;
+	margin-left: 10px;
+	padding-right: 38px;
+	font-size: 18px;
+	color: #fff;
+
+	&:before {
+		position: absolute;
+		top: 2px;
+		right: 0;
+		display: block;
+		content: "";
+		width: 33px;
+		height: 15px;
+		background: url($sprite_site) no-repeat -40px -80px;
+	}
+}
+
+/*	Medium Mobile
+	======================================================================================== */
+@include media(">=medium", "<tablet", "portrait") {
+	h3 {
+		margin-top: 50px;
+	}
+}
+
+
+/*	Tablet
+	======================================================================================== */
+@include media(">=tablet") {
+    h3 {
+    	margin-top: 100px;
+    	margin-bottom: 25px;
+    	font-size: 27px;
+    }
+
+	.short-description {
+		margin-bottom: 90px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	h4 {
+		margin-bottom: 25px;
+		font-size: 24px;
+	}
+
+	.offer-box {
+	    width: 390px;
+	    margin-bottom: 80px;
+	    padding: 40px 40px 10px;
+	    font-size: 27px;
+
+	    p {
+	    	margin-bottom: 30px;
+	    }
+
+	    .icon-selected {
+	    	// line-height: -9px;
+	    }
+
+	    .offer-text {
+	    	padding-top: 0;
+	    	line-height: 28px;
+	    }
+	}
+
+	.btn {
+		margin-bottom: 30px;
+	}
+}
+
+/*	Tablet Lanscape
+	======================================================================================== */
+
+@include media(">=tablet", "landscape") {
+	h3 {
+		margin-top: 50px;
+	}
+
+	.short-description {
+		margin-bottom: 40px;
+	}
+}
